@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerald James Preclaro | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Jerald James</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello!!! I'm Jerald a Computer Engineer with a strong background in web development, embedded systems, and innovative technology solutions. I am passionate about designing and building systems that solve real-world problems, from developing efficient software applications to creating hardware-based projects. With expertise in programming, system design, and problem-solving, I combine technical knowledge with creativity to deliver impactful results. I am also driven by continuous learning, keeping up with the latest trends in technology to enhance my skills. Dedicated and adaptable, I strive to contribute to projects that improve efficiency, accessibility, and innovation in the digital era.</p>
+      <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python, C++, Git</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h3>Smart Cashier System</h3>
+          <p>A simple yet powerful web-based system built for small businesses to manage sales, inventory, and customer credits (‘utang’). It helps replace manual record-keeping with a digital solution, reducing errors, saving time, and improving efficiency. Designed for sari-sari stores, hardware shops, and other local businesses, the system makes daily operations easier and more organized.</p>
+          <a href="#" class="view-btn" data-img="src/images/Techlaro.jpg">View Project</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3>Copra Segregation System</h3>
+          <p>The Copra Segregation System is an automated solution developed to classify copra based on quality and grade. Traditionally, segregation is done manually, which is time-consuming, inconsistent, and prone to human error. This system makes the process faster and more reliable by using technology to ensure accurate sorting. With improved efficiency, copra producers and traders can achieve higher productivity and better market value. Overall, the system helps modernize copra processing while reducing labor effort and costs.</p>
+          <a href="#" class="view-btn" data-img="src/images/Copra.jpg">View Project</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Resume</h2>
+      <p>Download my resume below:</p>
+      <a href="src/files/resume.pdf" class="btn" target="_blank">Download Resume (PDF)</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:JeraldJamesPreclaro@gmail.com">JeraldJamesPreclaro@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/jeraldjamespreclaro-eng
+" target="_blank">github.com/jeraldjamespreclaro-eng</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Jerald. All rights reserved.</p>
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+    const viewBtns = document.querySelectorAll(".view-btn");
+
+    viewBtns.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        const imgSrc = this.getAttribute("data-img");
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+      });
+    });
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
